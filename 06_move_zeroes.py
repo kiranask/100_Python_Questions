@@ -6,7 +6,7 @@ Write a Python function that takes a list of integers and moves all the zeroes t
 def move_zeroes(nums):
     zeroes = 0
     for num in nums:
-        if num == 0
+        if num == 0:
             nums.remove(num)
             zeroes +=1
     for _ in range(zeroes):
