@@ -7,3 +7,21 @@ The year can be evenly divided by 100, it is NOT a leap year, unless:
 The year is also evenly divisible by 400. Then it is a leap year.
 This means that in the Gregorian calendar, the years 2000 and 2400 are leap years, while 1800, 1900, 2100, 2200, 2300 and 2500 are NOT leap years"""
 
+
+def is_leap(year):
+    if (year % 4 == 0):
+        if (year % 100 == 0):
+            if (year % 400 == 0):
+                return True  # Divisible by 400
+            else:
+                return False  # Divisible by 100 but not 400
+        else:
+            return True  # Divisible by 4 but not 100
+    else:
+        return False  # Not divisible by 4
+
+    # Write your logic here
+
+
+year = int(input())
+print(is_leap(year))
